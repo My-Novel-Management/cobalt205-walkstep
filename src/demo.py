@@ -51,4 +51,5 @@ def sc_lastwalk(w: World):
 ## episode
 def ep_demo(w: World):
     return w.episode("近づけない距離", "二人の歩幅はもう合わせられなくなった",
+            sc_lastwalk(w),
             )
