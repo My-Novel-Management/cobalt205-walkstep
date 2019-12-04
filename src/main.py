@@ -30,6 +30,7 @@ def world():
 
 def story(w: World):
     return w.story("Sample",
+            ch_main(w),
             )
 
 def main(): # pragma: no cover
