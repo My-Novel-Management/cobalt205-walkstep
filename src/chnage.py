@@ -44,7 +44,7 @@ def sc_apart(w: World):
             ei.talk("なんもないよ"),
             chi.talk("キスの一つもしてないから？"),
             ei.talk("ちげーよ。そういうんじゃない"),
-            chi.tal("だったら何？"),
+            chi.talk("だったら何？"),
             ei.look("じっと"),
             chi.talk("もうちょっと、話してほしい"),
             ei.talk("何話せばいいんだよ"),
