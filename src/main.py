@@ -9,7 +9,7 @@ from storybuilder.builder.world import World
 from storybuilder.common.times import COMMON_TIMES
 from config import PERSONS, CHARAS, STAGES, DAYS, TIMES, ITEMS, WORDS
 from src.demo import ep_demo
-from src.chnage import ep_change_our
+from src.change import ep_change_our
 
 
 ## main
