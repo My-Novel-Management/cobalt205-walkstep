@@ -13,8 +13,11 @@ from storybuilder.builder.writer import Writer
 def sc_confession(w: World):
     chi, ei = Writer(w.chisa), Writer(w.eisuke)
     return w.scene("告白の鼓動", "最初の瞬間から、その不安は過っていた",
-            chi.be("じっとしている"),
-            ei.be(),
+            chi.be("じっとして"),
+            ei.be("$Sが"),
+            ei.be("緊張して"),
+            ei.talk("あの、それで先週の返事なんだけど"),
+            chi.nod(),
             )
 
 def sc_samestep(w: World):
