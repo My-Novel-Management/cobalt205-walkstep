@@ -9,12 +9,14 @@ from storybuilder.builder.world import World
 from storybuilder.common.times import COMMON_TIMES
 from config import PERSONS, CHARAS, STAGES, DAYS, TIMES, ITEMS, WORDS
 from src.demo import ep_demo
+from src.lastwalk import ep_lastwalk
 
 
 ## main
 def ch_main(w: World):
     return w.chapter("main",
-            ep_demo(w),
+            ep_demo(w).omit(),
+            ep_lastwalk(w),
             )
 
 def world():
