@@ -47,4 +47,5 @@ def sc_lastwalk(w: World):
 ## episode
 def ep_lastwalk(w: World):
     return w.episode("最後の帰り路", "いつの間にか歩幅は埋められなくなっていた",
+            sc_lastwalk(w),
             )
