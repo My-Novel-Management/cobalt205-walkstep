@@ -12,12 +12,14 @@ from src.demo import ep_demo
 from src.change import ep_change_our
 from src.enjoy import ep_enjoytime
 from src.firststep import ep_firststep
+from src.lastwalk import ep_lastwalk
 
 
 ## main
 def ch_main(w: World):
     return w.chapter("main",
             ep_demo(w).omit(),
+            ep_lastwalk(w),
             ep_enjoytime(w),
             ep_change_our(w),
             ep_firststep(w),
