@@ -10,6 +10,7 @@ from storybuilder.common.times import COMMON_TIMES
 from config import PERSONS, CHARAS, STAGES, DAYS, TIMES, ITEMS, WORDS
 from src.demo import ep_demo
 from src.change import ep_change_our
+from src.firststep import ep_firststep
 
 
 ## main
@@ -17,6 +18,7 @@ def ch_main(w: World):
     return w.chapter("main",
             ep_demo(w).omit(),
             ep_change_our(w),
+            ep_firststep(w),
             )
 
 def world():
