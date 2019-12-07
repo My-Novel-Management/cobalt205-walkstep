@@ -30,6 +30,14 @@ def sc_confession(w: World):
             chi.do("いってしまおうとする"),
             ei.talk("あの！"),
             ei.talk("一緒に、帰ろうか"),
+            # NOTE:
+            #   告白の返事をした後の、ぎこちなさから開始
+            #   一緒に帰ろうか、のところ
+            #   まだ春の残り香が街にある
+            #   爽やかな空とかの情景
+            camera=w.chisa,
+            stage=w.stage.crossroad,
+            day=w.day.first, time=w.time.afternoon,
             )
 
 def sc_samestep(w: World):
@@ -44,6 +52,12 @@ def sc_samestep(w: World):
             chi.remember("そんなささいな笑顔のやり取りが嬉しかったと"),
             chi.look("少しだけ開き始める歩幅を"),
             chi.attention("歩幅の違いを"),
+            # NOTE:
+            #   歩幅を合わせようと、千紗が急ぎ足で追いつこうとするところ
+            #   そこで背中を見つめて、思うこと
+            camera=w.chisa,
+            stage=w.stage.riverbed,
+            day=w.day.first, time=w.time.evening,
             )
 
 ## episode
