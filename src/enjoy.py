@@ -30,6 +30,13 @@ def sc_handdistance(w: World):
             chi.attention(),
             chi.look("彼の背中が近づいたり離れたりを繰り返すのを"),
             chi.think(doing="胸のどきどきを感じる"),
+            # NOTE:
+            #   手を繋げないまま、歩くが、互いに目を合わせたり、彼の話に適当に頷くのすら楽しい日々
+            #   好きな食べ物の話なんかでも楽しい
+            #   けれど尽く「合わない」
+            camera=w.chisa,
+            stage=w.stage.riverbed,
+            day=w.day.enjoy1, time=w.time.afternoon,
             )
 
 ## episode
