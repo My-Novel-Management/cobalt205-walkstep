@@ -41,6 +41,16 @@ def sc_lastwalk(w: World):
             chi.talk("やっぱり、終わりなんだね"),
             chi.talk("覚えてる？　最初に約束したこと"),
             ei.nod(),
+            # NOTE:
+            #   最後の帰り道は無言のまま、何故か歩幅が揃っている
+            #   どちらからも「別れよう」が出てくる
+            #   それを聞いて、ああ、やっぱり、と互いに思う
+            #   珍しく英輔は饒舌に語る
+            #   自分の知らない彼。でも最初の頃はこんなだった（あとで読者が気づく）
+            #   最初の約束、にフォーカスさせる
+            camera=w.chisa,
+            stage=w.stage.riverbed,
+            day=w.day.depart, time=w.time.evening,
             )
 
 
