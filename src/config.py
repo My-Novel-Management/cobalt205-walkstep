@@ -36,6 +36,7 @@ CHARAS = (
 STAGES = (
         # Tag / 名前 / 紹介
         ("riverbed", "河川敷"),
+        ("crossroad", "交差点"),
         )
 
 DAYS = (
