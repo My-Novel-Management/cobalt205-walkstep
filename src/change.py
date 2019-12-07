@@ -29,6 +29,12 @@ def sc_rainy(w: World):
             ei.talk("$n_chisaは進学どうすんだ？"),
             chi.talk("うん"),
             chi.be(doing="雨が酷くなってくる"),
+            # NOTE:
+            #   雨の中、秋になっている
+            #   傘を使って互いに近寄れない、心の距離が離れていっていることを見せる
+            camera=w.chisa,
+            stage=w.stage.crossroad,
+            day=w.disquiet1, time=w.time.evening,
             )
 
 def sc_apart(w: World):
@@ -53,6 +59,15 @@ def sc_apart(w: World):
             chi.talk("会話がしたいんじゃない"),
             ei.talk("わかんねーな"),
             chi.think("彼の歩く速度が早いと"),
+            # NOTE:
+            #   別日。秋風が冷たくて。コート
+            #   最初から距離が離れている
+            #   少し大きな声で呼び止めて、バスケにたとえられる
+            #   不和。話が噛み合わない
+            #   なんで、をスルーされる
+            camera=w.chisa,
+            stage=w.stage.riverbed,
+            day=w.disquiet2, time=w.time.evening,
             )
 
 ## episode
