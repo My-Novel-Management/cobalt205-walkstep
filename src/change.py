@@ -34,7 +34,7 @@ def sc_rainy(w: World):
             #   傘を使って互いに近寄れない、心の距離が離れていっていることを見せる
             camera=w.chisa,
             stage=w.stage.crossroad,
-            day=w.disquiet1, time=w.time.evening,
+            day=w.day.disquiet1, time=w.time.evening,
             )
 
 def sc_apart(w: World):
@@ -67,7 +67,7 @@ def sc_apart(w: World):
             #   なんで、をスルーされる
             camera=w.chisa,
             stage=w.stage.riverbed,
-            day=w.disquiet2, time=w.time.evening,
+            day=w.day.disquiet2, time=w.time.evening,
             )
 
 ## episode
