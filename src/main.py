@@ -15,6 +15,10 @@ from storybuilder.assets import basic, accessory
 ## settings
 from config import PERSONS, AREAS, STAGES, DAYS, TIMES, ITEMS, WORDS, RUBIS, LAYERS
 ## local files
+from src.episodes.e1_lastwalk import ep_lastwalk
+from src.episodes.e2_change import ep_change_our
+from src.episodes.e3_enjoy import ep_enjoytime
+from src.episodes.e4_firststep import ep_firststep
 
 
 ## define alias
@@ -34,6 +38,10 @@ _ = Writer.getWho()
 ## main
 def ch_main(w: World):
     return w.chapter("main",
+            ep_lastwalk(w),
+            ep_change_our(w),
+            ep_enjoytime(w),
+            ep_firststep(w),
             )
 
 def create_world():
