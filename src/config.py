@@ -25,16 +25,17 @@
 
 
 PERSONS = (
-        # Tag / 氏,名 / 歳 / 性別 / 職業 / 呼称 / 紹介
-        ("chisa", "千紗", "西村,千紗", 15, "female", "中学三年", "me:私"),
-        ("eisuke", "英輔", "中山,英輔", 15, "male", "中学三年", "me:俺"),
+        # Tag / 氏,名 / 歳 / 誕生日 / 性別 / 職業 / 呼称 / 紹介
+        ("chisa", "千紗", "西村,千紗", 15,(1,1), "female", "中学三年", "me:私"),
+        ("eisuke", "英輔", "中山,英輔", 15,(1,1), "male", "中学三年", "me:俺"),
         )
 
-CHARAS = (
+AREAS = (
+        # Tag / 名前 / x,y / 備考
         )
 
 STAGES = (
-        # Tag / 名前 / 紹介
+        # Tag / 名前 / Area / 紹介
         ("riverbed", "河川敷"),
         ("crossroad", "交差点"),
         )
@@ -58,5 +59,13 @@ ITEMS = (
 
 WORDS = (
         # Tag / 名前 / 紹介
+        )
+
+RUBIS = (
+        # Base / Rubi / Except / Type
+        )
+
+LAYERS = (
+        # Key / Title / Words
         )
 
