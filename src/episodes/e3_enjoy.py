@@ -16,8 +16,19 @@ _ = W.getWho()
 ## scenes
 def sc_handdistance(w: World):
     chi, ei = W(w.chisa), W(w.eisuke)
+    outside = W(w.outside)
     return w.scene("手の届く距離で", "まだ二人は手の届く距離を歩いていた",
+            w.comment("少し季節が動く"),
+            outside.look("夏の暑さを感じる",
+                "河川敷を二人で帰る"),
             chi.come("歩いている"),
+            ei.come("歩いている"),
+            chi.do("二人の距離は開いていく",
+                "それを$Sは追いかけて縮める",
+                "二人で帰る時はいつもこんな感じになってしまっていた"),
+            chi.talk("県大会、残念だったね"),
+            ei.talk("まあ、がんばるさ",
+                "それより試験が頭痛いわ"),# TODO
             chi.look("隣を歩く彼を"),
             chi.think("こんな風に帰れるなんてと"),
             ei.talk("ちょっと聞きたいんだが"),
