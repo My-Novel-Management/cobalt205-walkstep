@@ -17,9 +17,13 @@ _ = W.getWho()
 ## scenes
 def sc_lastwalk(w: World):
     chi, ei = W(w.chisa), W(w.eisuke)
+    outside = W(w.outside)
     return w.scene("最後の帰り路", "二人の歩幅はどんどん離れていく。そして",
-            chi.do(),
-            ei.do(),
+            w.comment("別れるところから始まる"),
+            outside.look("橋の前、河川敷",
+                "冬になり空がグレィ"),
+            chi.be("涙が滲んだ目で一度空を見上げる$S"),
+            ei.be("自転車を立てて、じっと俯いている$S"),# TODO
             chi.be("黙って"),
             ei.be("黙って"),
             chi.talk("あの"),
