@@ -55,6 +55,7 @@ TIMES = (
 
 ITEMS = (
         # Tag / 名前 / 紹介
+        ("line", "ＬＩＮＥ"),
         )
 
 WORDS = (
