@@ -21,13 +21,13 @@ def sc_confession(w: World):
             w.comment("告白される", "場所は学校を少し離れたところがいい"),
             w.comment("季節は春から初夏くらいが良い。最終的に冬に別れるから"),
             w.comment("$eisukeだけは自転車を引っ張っている。通学が異なる"),
-            w.br(),
+            w.symbol("　　　　五月"),
             w.comment("身長x0.45が目安"),
             chi.come("身長百五十一センチの歩幅は約六十八センチらしい", "&"),
             chi.do("その幅を重ねて$meは高校を出て一キロくらいの場所にある横断歩道に近づく",
                 "温かい風が小学校のフェンス越しの葉桜を揺らしていくのを横目に歩いていく$meを、",
                 "黄色いカバーを付けたランドセルを背負った小さな子たちが集団で追い抜いていく",
-                "あの頃からずっと、大きな声で子ども特有の高い声で喚くように喋り合う同級生たちを、",
+                "あの頃からずっと、大きな声で子ども特有の高い音域で喚くように喋り合う同級生たちを、",
                 "少し離れて羨ましさを噛み殺しながら見ていた",
                 "そんな$meは今でもこうして一人で、家路を歩いている"),
             chi.do("横断歩道の信号は赤へと変わり、$meと小学生の集団を分断した",
@@ -135,7 +135,7 @@ def sc_confession(w: World):
 def sc_samestep(w: World):
     chi, ei = Writer(w.chisa), Writer(w.eisuke)
     inside, outside = W(w.inside), W(w.outside)
-    return w.scene("歩幅を合わせて", "違う歩幅を合わせて互いに寄り添って帰る",
+    return w.scene("歩幅を合わせて",
             w.comment("季節は２学期が始まりで、秋。まだ残暑"),
             w.comment("告白を終えて、一緒に初めて帰った時の歩幅。合わせようとしていた。どちらからともなく"),
             w.br(),
@@ -154,6 +154,14 @@ def sc_samestep(w: World):
                 "一緒に帰ろうと言ってくれた彼は面倒な女だとでも思っているかも知れない",
                 "そんなことを考えると、目に涙が溜まる"),
             chi.talk("あの、さ"),
+            stage=w.on_riverbed,
+            day=w.in_first, time=w.at_evening,
+            )
+
+def sc_samestep2(w: World):
+    chi, ei = Writer(w.chisa), Writer(w.eisuke)
+    inside, outside = W(w.inside), W(w.outside)
+    return w.scene("歩幅を合わせて2",
             ei.talk("ん？"),
             chi.hear("彼の低い声が、響く"),
             chi.do("何か話していないと泣いてしまいそうで、けれど話題を探してもまず言葉が浮かんでこなくて、",
@@ -199,6 +207,15 @@ def sc_samestep(w: World):
                     "その照れ臭さを隠すように下を向いて早足になるけれど、彼はすぐに追いついて、行き過ぎたとまた立ち止まる",
                     "顔を上げるとそこに、彼の笑顔が待っていた"),
             chi.talk("ねえ、あの、さ"),
+            # NOTE:
+            #   歩幅を合わせようと、千紗が急ぎ足で追いつこうとするところ
+            #   そこで背中を見つめて、思うこと
+            ).omit()
+
+def sc_samestep3(w: World):
+    chi, ei = Writer(w.chisa), Writer(w.eisuke)
+    inside, outside = W(w.inside), W(w.outside)
+    return w.scene("歩幅を合わせて3",
             ei.talk("何？"),
             chi.talk("もしどっちかが駄目ってなったら、その時は後腐れなく、別れるって約束、して下さい"),
             chi.do("彼は一瞬何を言われたのか分からなかったみたいだったけれど、一分ほど考え込んで、"),
@@ -206,11 +223,6 @@ def sc_samestep(w: World):
             outside.look("夕日が落ちてくる",
                 "二人の影が長く伸び、歩き出した時に重なっていたそれは、ゆっくりと離れていった"),
             w.symbol("（了）"),
-            # NOTE:
-            #   歩幅を合わせようと、千紗が急ぎ足で追いつこうとするところ
-            #   そこで背中を見つめて、思うこと
-            stage=w.on_riverbed,
-            day=w.in_first, time=w.at_evening,
             )
 
 ## episode
@@ -218,4 +230,6 @@ def ep_firststep(w: World):
     return w.episode("最初の帰り路", "一番最初から、その予感があったことを思い出す",
             sc_confession(w),
             sc_samestep(w),
+            sc_samestep2(w),
+            sc_samestep3(w),
             )
