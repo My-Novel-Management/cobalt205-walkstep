@@ -24,7 +24,7 @@ script:
     - coverage run --parallel-mode --rcfile=.coveragerc setup.py test
     - coverage run --parallel-mode --rcfile=.coveragerc src/main.py --rubi
     - coverage run --parallel-mode --rcfile=.coveragerc src/main.py --text --plot --data --rubi
-    - coverage run --parallel-mode --rcfile=.coveragerc src/main.py --analyze
+#    - coverage run --parallel-mode --rcfile=.coveragerc src/main.py --analyze
 
 after_success:
     - coverage combine
