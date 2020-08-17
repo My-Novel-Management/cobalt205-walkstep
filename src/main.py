@@ -33,9 +33,9 @@ from scenes import Riverbed
 # Constant
 TITLE = "歩幅"
 MAJOR, MINOR, MICRO = 1, 1, 0
-COPY = "その瞬間だけ、君に会える"
+COPY = "恋愛は歩幅を合わせるようなものかも知れない"
 ONELINE = "高校生の二人は初めて付き合い、そして別れた。それだけの物語"
-OUTLINE = "約8000字の恋愛短編。別れることになってしまった高校生の二人。何故そうなったのかを振り返ってみた"
+OUTLINE = "約9000字の恋愛短編。別れることになってしまった高校生の二人。何故そうなったのかを振り返ってみた"
 THEME = "思いのすれ違い"
 GENRE = "恋愛／青春"
 TARGET = "10-30years"
